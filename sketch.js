@@ -23,10 +23,7 @@ function draw() {
   // text(mouseX+","+mouseY, 600,100)
   textSize(20)
   // text("Moves: "+moves, 600,50)
-  if(ring2.y===100 || ring3.y===100 ){
-    fill("white")
-    text("cant place larger on smaller",400,40)
-  }
+  
   if(ring1.x===750 && ring2.x===750 && ring3.x===750 ){
     textSize(40);
     text("You Won ",500,200)
@@ -35,9 +32,19 @@ function draw() {
   drawSprites();
   drawLines();
   ringCollide();
-  ringMoved(ring1);
-  ringMoved(ring2);
-  ringMoved(ring3); 
+ if(ring2.y===100 ){
+    fill("white")
+    text("cant place larger on smaller",400,40)
+    ringMoved(ring2);
+  }else if(ring3.y===100 ){
+    fill("white")
+    text("cant place larger on smaller",400,40)
+    ringMoved(ring3);
+  }else{
+    ringMoved(ring1);
+    ringMoved(ring2);
+    ringMoved(ring3);
+  } 
 }
 function drawLines(){
   strokeWeight(5)
