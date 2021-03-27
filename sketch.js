@@ -24,7 +24,7 @@ function draw() {
   textSize(20)
   // text("Moves: "+moves, 600,50)
   if(ring2.y===100 || ring3.y===100 ){
-    fill("red")
+    fill("white")
     text("cant place larger on smaller",400,40)
   }
   if(ring1.x===750 && ring2.x===750 && ring3.x===750 ){
