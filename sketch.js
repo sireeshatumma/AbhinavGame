@@ -1,4 +1,4 @@
-var bool=true
+
 var v=5;
 var moves=0;
 var bool=false;
@@ -56,7 +56,7 @@ function draw() {
     ringMoved(ring4);
   }
   if(bool){
- //   calculateMoves();
+    calculateMoves();
   }
    
 }
